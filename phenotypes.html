@@ -3,20 +3,27 @@
 <html>
   <head>
     <title> Birthday Principle Skeleton </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="js/jquery.windows.js">
+    </script>
+    <script src="js/semantic.min.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
   </head>
   
   <body>
-    <div class="fixed secondary pointing navbar ui purple main menu opaque">
+    <div class="fixed secondary pointing navbar ui red main menu opaque">
       <a href="index.html" class="item">
         <div id="active logo">
           The Birthday Principle
         </div>
       </a>
 
-      <a href="index.html"class="active item">
+      <a href="index.html"class="item">
         Overview
       </a>
 
@@ -24,27 +31,32 @@
         Hashing
       </a>
 
-      <a href="phenotypes.html" class="item">
+      <a href="phenotypes.html" class="active item">
         Phenotypes
       </a>
 
     </div>
 
-    <div class="content">
-      
-      <section id="0" class="window">
-          <div class="content">
-                  <h1>Section 1</h1>
-          </div>
-      </section>
-
-      <section id="2" class="window">
-          <div class="content">
-              <h2>Section 2</h2>
-          </div>
-      </section>
-
     </div>
+    <center>
+
+      <div class = "content">
+
+        <section id="0" class="window">
+            <div class="content">
+                    <h1>Section 1</h1>
+            </div>
+        </section>
+
+        <section id="2" class="window">
+            <div class="content">
+                <h2>Section 2</h2>
+            </div>
+        </section>
+
+      </div>
+
+    </center>
 
     <!-- Load the script at the end for faster load -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
@@ -54,21 +66,10 @@
     <script src="js/semantic.min.js">
     </script>
     <script>
-      $(document).ready(function(){
-        $('.window').windows({
-          snapping: true,
-          snapSpeed: 500,
-          snapInterval: 1100,
-          onScroll: function(scrollPos){
-              // scrollPos:Number
-          },
-          onSnapComplete: function($el){
-              // after window ($el) snaps into place
-          },
-          onWindowEnter: function($el){
-              // when new window ($el) enters viewport
-          }
-        })
+      $('.window').windows({
+        snapping: true,
+        snapSpeed: 500,
+        snapInterval: 1100,
       });
     </script>
 
