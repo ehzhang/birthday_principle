@@ -1,4 +1,3 @@
-
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,300');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -15,4 +14,20 @@ body {
 
 .opaque {
 	background: white !important;
+}
+
+.side-progress-bar {
+	z-index: 1;
+	top: 50px;
+	position: fixed;
+	right: 20px;
+}
+
+i.square {
+	background-color: blue;
+}
+
+i.square:hover {
+	background-color: blue;
+    transition: all .5s ease-in-out;
 }

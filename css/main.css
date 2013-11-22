@@ -50,14 +50,24 @@ pre {
   line-height: 1.6em;
 }
 
-/* line 26, ../scss/demo/_demo.scss */
+/* line 25, ../scss/demo/_demo.scss */
+.darkgrey {
+  color: #333a3e;
+}
+
+/* line 29, ../scss/demo/_demo.scss */
+.lightgrey {
+  color: #d5d7dd;
+}
+
+/* line 34, ../scss/demo/_demo.scss */
 .window:nth-child(1) .content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -170px;
 }
-/* line 31, ../scss/demo/_demo.scss */
+/* line 39, ../scss/demo/_demo.scss */
 .window:nth-child(1) .content i {
   font-size: 4.0em;
   width: 100%;
@@ -65,50 +75,50 @@ pre {
   display: inline-block;
   color: #6ab29f;
 }
-/* line 38, ../scss/demo/_demo.scss */
+/* line 46, ../scss/demo/_demo.scss */
 .window:nth-child(1) .content h1 {
   margin: 0;
+  font-size: 5.0em;
 }
-/* line 41, ../scss/demo/_demo.scss */
+/* line 50, ../scss/demo/_demo.scss */
 .window:nth-child(1) .content h2 {
   padding: 0 30px;
 }
 
-/* line 49, ../scss/demo/_demo.scss */
+/* line 58, ../scss/demo/_demo.scss */
 .window:nth-child(2) .content {
   position: absolute;
   top: 50%;
-  left: 50%;
+  width: 100%;
   margin-top: -180px;
-  margin-left: -160px;
 }
-/* line 55, ../scss/demo/_demo.scss */
+/* line 63, ../scss/demo/_demo.scss */
 .window:nth-child(2) .content h2 {
-  color: #d5d7dd;
-  text-align: left;
+  color: white;
+  text-align: center;
 }
-/* line 58, ../scss/demo/_demo.scss */
+/* line 66, ../scss/demo/_demo.scss */
 .window:nth-child(2) .content h2 .highlight {
   color: white;
 }
 
-/* line 67, ../scss/demo/_demo.scss */
+/* line 75, ../scss/demo/_demo.scss */
 .window:nth-child(3) ul {
   list-style-type: none;
 }
-/* line 68, ../scss/demo/_demo.scss */
+/* line 76, ../scss/demo/_demo.scss */
 .window:nth-child(3) .content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -230px;
 }
-/* line 73, ../scss/demo/_demo.scss */
+/* line 81, ../scss/demo/_demo.scss */
 .window:nth-child(3) .content h2 {
   text-align: center;
   font-size: 3.0em;
 }
-/* line 77, ../scss/demo/_demo.scss */
+/* line 85, ../scss/demo/_demo.scss */
 .window:nth-child(3) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #333a3e;
@@ -116,12 +126,12 @@ pre {
   text-align: center;
   padding: 0 15%;
 }
-/* line 83, ../scss/demo/_demo.scss */
+/* line 91, ../scss/demo/_demo.scss */
 .window:nth-child(3) .content .explanation li {
   color: #d5d7dd;
 }
 
-/* line 92, ../scss/demo/_demo.scss */
+/* line 100, ../scss/demo/_demo.scss */
 .window:nth-child(4) pre {
   position: absolute;
   top: 50%;
@@ -129,23 +139,23 @@ pre {
   margin: -220px 0 0 -450px;
 }
 
-/* line 102, ../scss/demo/_demo.scss */
+/* line 110, ../scss/demo/_demo.scss */
 .window:nth-child(5) .content {
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -350px 0 0 -450px;
 }
-/* line 108, ../scss/demo/_demo.scss */
+/* line 116, ../scss/demo/_demo.scss */
 .window:nth-child(5) h1 {
   color: #333a3e;
 }
-/* line 111, ../scss/demo/_demo.scss */
+/* line 119, ../scss/demo/_demo.scss */
 .window:nth-child(5) pre {
   color: #333a3e;
 }
 
-/* line 119, ../scss/demo/_demo.scss */
+/* line 127, ../scss/demo/_demo.scss */
 .window:nth-child(6) .content {
   position: absolute;
   top: 50%;
@@ -166,38 +176,58 @@ html, body {
   height: 100%;
   position: absolute;
 }
+/* line 15, ../scss/main.scss */
+.window .content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -180px;
+}
+/* line 22, ../scss/main.scss */
+.window .bottom {
+  position: absolute;
+  top: 88%;
+  width: 100%;
+}
+/* line 26, ../scss/main.scss */
+.window .bottom i {
+  font-size: 4.0em;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(1) {
   background: #d5d7dd;
   top: 0%;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(2) {
   background: #1babb7;
   top: 100%;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(3) {
   background: #6ab29f;
   top: 200%;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(4) {
   background: #333a3e;
   top: 300%;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(5) {
   background: #d0482b;
   top: 400%;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .window:nth-child(6) {
   background: #231f20;
   top: 500%;
