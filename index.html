@@ -45,18 +45,19 @@
     <div class="content">
       
       <section id="0" class="window">
-          <div class="content">
+          <div class="window-content">
                   <h1> What is the Birthday Principle? </h1>
                   <h2> If there are 25 people in a room, what is the probability that 2 people share a birthday?
                   </h2>
           </div>
           <div class="bottom">
-            <i class="darkgrey angle down icon"></i>
+            <a href="#2" class="scroll"><i class="darkgrey angle down icon"></i>
+            </a>
           </div>
       </section>
 
       <section id="2" class="window">
-          <div class="content">
+          <div class="window-content">
 
             <h2> Let's start smaller (or larger!). What if there were 366 people in the room?
             </h2>
@@ -74,7 +75,7 @@
                   See Solution and Explantion
               </div>
 
-              <div class="something">
+              <div class="content">
                 <p>
 
                   This comes from the Pigeonhole Principle: "If there are more pigeons than holes, at least two pigeons must be in the same hole." 
@@ -90,7 +91,9 @@
         </div>
 
         <div class="bottom">
-          <i class="lightgrey angle down icon"></i>
+          <a href="#3" class="scroll">
+            <i class="lightgrey angle down icon"></i>
+          </a>
         </div>
 
       </section>
@@ -141,8 +144,22 @@
       $('.ui.accordion')
         .accordion()
       ;
-    </script>
+      
+      // Smooth Scroll to location
+      $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 500,'swing');
+        })  
 
+    </script>
   </body>
 </html>
 

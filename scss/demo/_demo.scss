@@ -31,7 +31,7 @@ pre{
 }
 
 .window:nth-child(1){
-    .content{
+    .window-content{
         position:absolute;
         top:50%;
         width:100%;
@@ -55,7 +55,7 @@ pre{
 
 
 .window:nth-child(2){
-    .content{
+    .window-content{
         position:absolute;
         top:50%;
         width:100%;
@@ -73,7 +73,7 @@ pre{
 // explanation
 .window:nth-child(3){
     ul{ list-style-type:none; }
-    .content{
+    .window-content{
         position:absolute;
         top:50%;
         width:100%;
@@ -107,7 +107,7 @@ pre{
 
 // api
 .window:nth-child(5){
-    .content{
+    .window-content{
         position:absolute;
         top:50%;
         left:50%;
@@ -124,7 +124,7 @@ pre{
 
 //download
 .window:nth-child(6){
-    .content{
+    .window-content{
         position:absolute;
         top:50%;
         left:50%;
