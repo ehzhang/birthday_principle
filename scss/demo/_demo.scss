@@ -70,7 +70,7 @@ pre{
     }
 }
 
-// explanation
+// game
 .window:nth-child(3){
     ul{ list-style-type:none; }
     .window-content{
@@ -78,9 +78,12 @@ pre{
         top:50%;
         width:100%;
         margin-top:-230px;
+
         h2{
             text-align:center;
-            font-size:3.0em;
+            font-size:1.0em;
+            color:white;
+            padding:0 10%;
         }
         .explanation{
             font-family:$regular;
@@ -95,29 +98,36 @@ pre{
     }
 }
 
-// code example
+// explanation
 .window:nth-child(4){
-    pre{
+    ul{ list-style-type:none; }
+    .window-content{
         position:absolute;
-        top:50%;
-        left:50%;
-        margin:-220px 0 0 -450px;
-    }
+        top:40%;
+        width:100%;
+        margin-top:-230px;
+
+        h2{
+            text-align:center;
+            font-size:1.0em;
+            padding:0 15%;
+        }
+    }    
 }
 
-// api
+// explanation cont, going to n
 .window:nth-child(5){
     .window-content{
         position:absolute;
         top:50%;
-        left:50%;
-        margin:-350px 0 0 -450px;
-    }
-    h1{
-        color:$dark-gray;
-    }
-    pre{
-        color:$dark-gray;
+        width:100%;
+        margin-top:-180px;
+        h2{
+            color:black;
+            text-align:center;
+            font-size:1.0em;
+            padding:0 15%;
+        }
     }
 }
 
@@ -126,9 +136,49 @@ pre{
 .window:nth-child(6){
     .window-content{
         position:absolute;
+        top:40%;
+        width:100%;
+        margin-top:-180px;
+        h2{
+            color:black;
+            text-align:center;
+            font-size:1.0em;
+            padding:0 15%;
+        }
+    }
+}
+
+// something
+.window:nth-child(7){
+    .window-content{
+        position:absolute;
+        top:35%;
+        width:100%;
+        margin-top:-180px;
+        h2{
+            color:black;
+            text-align:center;
+            font-size:1.0em;
+            padding:0 15%;
+        }
+        h3{
+            color:black;
+            text-align:center;
+            font-size:.5em;
+            padding:0 15%;
+        }
+    }
+}
+
+.window:nth-child(8){
+    .window-content{
+        position:absolute;
         top:50%;
-        left:50%;
-        margin:-100px 0 0 -100px;
-        text-align:center;
+        width:100%;
+        margin-top:-180px;
+        h2{
+            color:white;
+            text-align:center;
+        }
     }
 }

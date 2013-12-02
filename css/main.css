@@ -113,12 +113,14 @@ pre {
   width: 100%;
   margin-top: -230px;
 }
-/* line 81, ../scss/demo/_demo.scss */
+/* line 82, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content h2 {
   text-align: center;
-  font-size: 3.0em;
+  font-size: 1.0em;
+  color: white;
+  padding: 0 10%;
 }
-/* line 85, ../scss/demo/_demo.scss */
+/* line 88, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #333a3e;
@@ -126,41 +128,91 @@ pre {
   text-align: center;
   padding: 0 15%;
 }
-/* line 91, ../scss/demo/_demo.scss */
+/* line 94, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation li {
   color: #d5d7dd;
 }
 
-/* line 100, ../scss/demo/_demo.scss */
-.window:nth-child(4) pre {
+/* line 103, ../scss/demo/_demo.scss */
+.window:nth-child(4) ul {
+  list-style-type: none;
+}
+/* line 104, ../scss/demo/_demo.scss */
+.window:nth-child(4) .window-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -220px 0 0 -450px;
+  top: 40%;
+  width: 100%;
+  margin-top: -230px;
+}
+/* line 110, ../scss/demo/_demo.scss */
+.window:nth-child(4) .window-content h2 {
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0 15%;
 }
 
-/* line 110, ../scss/demo/_demo.scss */
+/* line 120, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content {
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin: -350px 0 0 -450px;
+  width: 100%;
+  margin-top: -180px;
 }
-/* line 116, ../scss/demo/_demo.scss */
-.window:nth-child(5) h1 {
-  color: #333a3e;
-}
-/* line 119, ../scss/demo/_demo.scss */
-.window:nth-child(5) pre {
-  color: #333a3e;
+/* line 125, ../scss/demo/_demo.scss */
+.window:nth-child(5) .window-content h2 {
+  color: black;
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0 15%;
 }
 
-/* line 127, ../scss/demo/_demo.scss */
+/* line 137, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content {
   position: absolute;
+  top: 40%;
+  width: 100%;
+  margin-top: -180px;
+}
+/* line 142, ../scss/demo/_demo.scss */
+.window:nth-child(6) .window-content h2 {
+  color: black;
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0 15%;
+}
+
+/* line 153, ../scss/demo/_demo.scss */
+.window:nth-child(7) .window-content {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  margin-top: -180px;
+}
+/* line 158, ../scss/demo/_demo.scss */
+.window:nth-child(7) .window-content h2 {
+  color: black;
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0 15%;
+}
+/* line 164, ../scss/demo/_demo.scss */
+.window:nth-child(7) .window-content h3 {
+  color: black;
+  text-align: center;
+  font-size: .5em;
+  padding: 0 15%;
+}
+
+/* line 174, ../scss/demo/_demo.scss */
+.window:nth-child(8) .window-content {
+  position: absolute;
   top: 50%;
-  left: 50%;
-  margin: -100px 0 0 -100px;
+  width: 100%;
+  margin-top: -180px;
+}
+/* line 179, ../scss/demo/_demo.scss */
+.window:nth-child(8) .window-content h2 {
+  color: white;
   text-align: center;
 }
 
@@ -217,18 +269,30 @@ html, body {
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(4) {
-  background: #333a3e;
+  background: #d5d7dd;
   top: 300%;
 }
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(5) {
-  background: #d0482b;
+  background: #6ab29f;
   top: 400%;
 }
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(6) {
-  background: #231f20;
+  background: #d5d7dd;
   top: 500%;
+}
+
+/* line 36, ../scss/main.scss */
+.window:nth-child(7) {
+  background: #6ab29f;
+  top: 600%;
+}
+
+/* line 36, ../scss/main.scss */
+.window:nth-child(8) {
+  background: #1babb7;
+  top: 700%;
 }

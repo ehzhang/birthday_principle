@@ -32,7 +32,7 @@ html, body{
     }
 }
 
-@for $i from 1 through 6{
+@for $i from 1 through 8{
     .window:nth-child(#{$i}){
         background:nth($colors, $i);
         top:($i - 1) * 100%;

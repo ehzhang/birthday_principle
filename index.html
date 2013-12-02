@@ -60,11 +60,14 @@
           <div class="window-content">
 
             <h2> Let's start smaller (or larger!). What if there were 366 people in the room?
+              <br>
+              (Answer with a probability between 0 and 1)
             </h2>
+
             <center>
               <div class="ui big action input">
-                <input type="text" placeholder="Enter an answer here">
-                <div class="ui button"> Check Answer </div>
+                <input id="question1" type="text" placeholder="Enter an answer here">
+                <div id="question1button" class="ui button" onclick="checkValue(1)"> Check Answer </div>
               </div>
 
             <br>
@@ -76,13 +79,13 @@
               </div>
 
               <div class="content">
-                <p>
 
-                  This comes from the Pigeonhole Principle: "If there are more pigeons than holes, at least two pigeons must be in the same hole." 
+                  The probability is 1! <br>
 
-                  In our example, there were 366 pigeons and 365 holes that the pigeons could fit in to. So two of them had to go into the same hole!
+                  This comes from the Pigeonhole Principle: "If there are more pigeons than holes, at least two pigeons must be in the same hole." <br>
 
-                </p>
+                  In our example, there were 366 'pigeons' (people with birthdays) and 365 'holes' (possible birthdays) that the pigeons could fit in to. So two of them had to go into the same hole, as we can't have 366 unique birthdays!
+
               </div>
             </div>
 
@@ -92,37 +95,225 @@
 
         <div class="bottom">
           <a href="#3" class="scroll">
-            <i class="lightgrey angle down icon"></i>
+            <i class="lightgrey angle down icon"></i>            
           </a>
         </div>
 
       </section>
 
       <section id="3" class="window">
-          <div class="content">
-              <h2>Section 3</h2>
+          <div class="window-content">
+            <h2>
+            
+            In reality, there will probably be a lot fewer than 366 people in a room before someone shares a birthday. 
+            Try this game! Just click "Add Person", and a new person will enter the 'room'.
+            Each person is randomly assigned a birthday, and the game ends when two of the people in the room have the same birthday.
+
+            </h2>
+
+            <div id="pigeonBirthday">
+              <div id="displayWindow">
+                <canvas id ="canvas" height="300" width="600">
+                  
+                </canvas>
+              </div>
+              <div id="displayWindowInformation">
+                <button id="addPerson" class="ui button" onclick="newBirthday()">Add Person</button>
+                <button id="clear" class="ui button" onclick="reset()">Reset</button>
+                Number of People: <input id="numPeople" value="0" readonly="" />
+                <span id="matchLabel">No matching birthdays.</span>
+              </div>
+
+            </div>
+
+            <h2>
+              You might notice it doesn't take too many clicks before finding a matching birthday. How can that be?
+            </h2>
+
           </div>
           <div class="bottom">
-            <i class="darkgrey angle down icon"></i>
+            <a href="#4" class="scroll">
+              <i class="lightgrey angle down icon"></i>            
+            </a>
           </div>
       </section>
 
       <section id="4" class="window">
-          <div class="content">
-              <h2>Section 4</h2>
+          <div class="window-content">
+              <h2>
+                Instead of thinking about how likely it is two people share a birthday, let's think about the chance that a group of people don't share a birthday. <br>
+                Let's start with an individual's chance of not-sharing a birthday. This can be calculated, pretty simply as:
+                <br>
+                <br>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - P('IShareABirthday')</div>
+                <br>
+                When person 1 (The first person!) enters the room, we have that:
+                <br>
+                <br>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - P('IShareABirthday')</div>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - 0</div><br>
+                This person has a 365/365 probability of having his own birthday. He can't share a birthday because there's noone to share the birthday with!
+
+                <br>
+                Next, enters person 2.
+                <br>
+                <br>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - \dfrac{1}{365}</div><br>
+                She has a 364/365 probability of having a unique birthday, because there is a 1/365 chance she shares a birthday with person 1. 
+
+                <br>
+                Next, enters person 3.
+                <br>
+                <br>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - (\dfrac{1}{365} + \dfrac{1}{365})</div><br>
+                He has a 363/365 probability of having his own birthday, because there is a 1/365 chance he shares a birthday with person one and a 1/365 chance he shares a birthday with person 2.
+
+              </h2>
           </div>
+          <div class="bottom">
+            <a href="#5" class="scroll">
+              <i class="darkgrey angle down icon"></i>            
+            </a>
+          </div>          
+      </section>
+
+      <section id="5" class="window">
+          <div class="window-content">
+              <h2>
+                Now, person <i>n</i> enters the room.
+                <br>
+                We can write the equation for the probability now as:
+                <br>
+                <br>
+                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - \dfrac{n-1}{365}</div>
+                The number <span lang="latex">\dfrac{(n-1)}{365}</span> is going to grow pretty quickly. at about 185 days, it will start to be more likely than not that the person entering the room shares a birthday with someone else.
+                <br>
+                In fact, the birthday principle equation grows much more quickly than <span lang="latex">\dfrac{(n-1)}{365}</span> because it has to take into consideration all the other probabilities that came before person <i>n</i>.
+                <br>
+                <br>
+
+              </h2>
+          </div>
+
+          <div class="bottom">
+            <a href="#6" class="scroll">
+              <i class="lightgrey angle down icon"></i>            
+            </a>
+          </div> 
+      </section>
+
+      <section id="6" class="window">
+          <div class="window-content">
+              <h2>
+
+                We can refer to the probability now as <span lang="latex">P(Room')</span>, which will be the total product of each probability of having a unique birthday. Thus:
+                <br>
+                <br>
+                <div lang="latex">P(Room') = (\dfrac{365}{365})(\dfrac{364}{365})(\dfrac{363}{365})...(\dfrac{(n-1)}{365})</div>
+                <br>
+                <div lang="latex">P(Room') = \dfrac{365(365-1)(365-2)...(365(n-1))}{365}</div>
+                <br>
+                <div lang="latex">P(Room') = (1-\dfrac{0}{365})(1-\dfrac{1}{365})...(1-\dfrac{(n-1)}{365})</div>
+                <br>
+                From here, we can replace this with: <span lang="latex">P(Room') = (e^{\frac{0}{365}})(e^{\frac{-1}{365}})(e^{\frac{-2}{365}})...(e^{\frac{-(n-1)}{365}})</span>.
+                <br>
+                <br>
+                This is because we can replace the '1 +' operation with a e^ operation. This is possible because <span lang="latex">1 + x</span> is always less than <span lang="latex">e^x</span>. The equation we get after that substitution is an 'upper bound' on the actual probability equation.
+
+              </h2>
+          </div>
+
+          <div class="bottom">
+            <a href="#7" class="scroll">
+              <i class="darkgrey angle down icon"></i>            
+            </a>
+          </div> 
+      </section>
+
+      <section id="7" class="window">
+          <div class="window-content">
+              <h2>
+
+                We can finally write the probability as:
+                <br>
+                <br>
+                <div lang="latex">P(room') = e^{\sum\limits_{i=1}^{n-1} \frac{i}{365}}</div>
+                <br>
+                We can simplify the sum, so now:
+                <div lang="latex">P('RoomHasNoRepeatBirthdays') = e^{-\frac{n(n-1)}{2(365)}}</div>
+                <br>
+                <br>
+                so this also means:
+                <div lang="latex">P('RoomHasRepeatBirthday') = 1 - e^{-\frac{n(n-1)}{2(365)}}</div>
+                <br>
+                <br>
+                We can observe this probability in the following graph:
+                <br>
+                <a href="http://en.wikipedia.org/wiki/Birthday_problem"><img src="http://upload.wikimedia.org/wikipedia/commons/e/e7/Birthday_Paradox.svg" width="300"></a>
+              </h2>
+              <h3> (source: http://en.wikipedia.org/wiki/Birthday_problem)
+              </h3>
+          </div>
+
+          <div class="bottom">
+            <a href="#8" class="scroll">
+              <i class="darkgrey angle down icon"></i>            
+            </a>
+          </div> 
+      </section>
+
+      <section id="8" class="window">
+          <div class="window-content">
+
+            <h2> You can now answer the original question!
+              <br>
+              What is the probability two people wil share a birthday if there are 25 people in a room?
+              <br>
+              (Answer with a probability between 0 and 1)
+            </h2>
+
+            <center>
+              <div class="ui big action input">
+                <input id="question2" type="text" placeholder="Enter an answer here">
+                <div id="question2button" class="ui button" onclick="checkValue(2)"> Check Answer </div>
+              </div>
+
+            <br>
+
+            <div class="ui accordion">
+              <div class="active title">
+                See Solution and Explanation
+                <i class="dropdown icon"></i>
+                <br>
+
+              </div>
+
+              <div class="content">
+
+                You can find this simply by plugging in '25' for n in the equation below!
+                <div lang="latex">P('RoomHasRepeatBirthday') = 1 - e^{-\frac{n(n-1)}{2(365)}}</div>
+
+              </div>
+            </div>
+
+            </center>
+          </div>
+
+          <div class="bottom">
+            <a href="#8" class="scroll">
+              <i class="darkgrey angle down icon"></i>            
+            </a>
+          </div> 
       </section>
 
 
     </div>
 
     <!-- Load the script at the end for faster load -->
-    <script src="js/jquery-2.0.3.min.js">
-    </script>
-    <script src="js/jquery.windows.js">
-    </script>
-    <script src="js/semantic.min.js">
-    </script>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.windows.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
     <script>
       $(document).ready(function(){
         $('.window').windows({
@@ -144,6 +335,28 @@
       $('.ui.accordion')
         .accordion()
       ;
+
+      function checkValue(question){
+        var button = document.getElementById("question" + question + "button")
+
+        if(question == 1) {
+          if (document.getElementById("question1").value == 1) {
+            button.className = "ui button green";
+          }
+          else {
+            button.className = "ui button red";
+          }
+        }
+
+        if(question ==2) {
+          var answer = document.getElementById("question2").value;
+          if (answer < .58 && answer > .56) {
+            button.className = "ui button green";
+          } else {
+            button.className = "ui button red";
+          }
+        }
+      }
       
       // Smooth Scroll to location
       $(".scroll").click(function(event){
@@ -157,7 +370,64 @@
          }
          //go to destination
          $('html,body').animate({scrollTop:dest}, 500,'swing');
-        })  
+      })
+
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      ctx.font='1em';
+
+      var randomMonth;
+      var randomDay;
+      var count=0;
+      var birthdays = new Array();
+
+      function newBirthday(){
+        var xCoordinate = Math.floor(Math.random()*550);
+        var yCoordinate = Math.floor(Math.random()*250);
+        function birthday(){
+          randomMonth = Math.floor(Math.random()*12+1);
+          if (randomMonth ==2 ){
+            randomDay = Math.floor(Math.random()*29+1);
+          } else if ((randomMonth < 8 && randomMonth%2==1)||(randomMonth>7&& randomMonth%2==0)){
+            randomDay = Math.floor(Math.random()*31+1);
+          } else {
+            randomDay = Math.floor(Math.random()*30+1);
+          }
+        }
+
+        function drawPerson(){
+          ctx.beginPath();
+          ctx.arc(xCoordinate,yCoordinate,20,0,2*Math.PI);
+          ctx.stroke();
+          ctx.fillText(randomMonth+"/"+randomDay,xCoordinate-15,yCoordinate+5);
+        }
+        count++;
+        document.getElementById('numPeople').value=count;
+        birthday();
+        drawPerson();
+        birthdayEntry = randomDay.toString() + randomMonth.toString();
+        console.log('Birthday Entry: '+birthdayEntry);
+        console.log('Last Index Of: '+birthdays.lastIndexOf(birthdayEntry));
+        if (birthdays.lastIndexOf(birthdayEntry)==-1){
+          console.log('Not a match');
+          birthdays.push(birthdayEntry);
+        } else {
+          birthdays.push(birthdayEntry);
+          document.getElementById('addPerson').disabled=true;
+          document.getElementById('matchLabel').innerHTML='Found a match! '+randomMonth+'/'+randomDay;
+          console.log('Found a match! ... you should do something....');
+          console.log(birthdayEntry);
+        }
+        console.log(birthdays);
+      }
+      function reset(){
+        count=0;
+        document.getElementById('numPeople').value=count;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        document.getElementById('addPerson').disabled=false;
+        document.getElementById('matchLabel').innerHTML='No matching birthdays.';
+        birthdays=[];
+      }  
 
     </script>
   </body>
