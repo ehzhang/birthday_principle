@@ -90,37 +90,44 @@ pre {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -180px;
+  margin-top: -200px;
 }
 /* line 63, ../scss/demo/_demo.scss */
 .window:nth-child(2) .window-content h2 {
   color: white;
   text-align: center;
+  padding: 0 15%;
 }
 /* line 66, ../scss/demo/_demo.scss */
 .window:nth-child(2) .window-content h2 .highlight {
   color: white;
 }
+/* line 71, ../scss/demo/_demo.scss */
+.window:nth-child(2) .window-content h3 {
+  color: white;
+  text-align: center;
+  font-size: 0.5em;
+}
 
-/* line 75, ../scss/demo/_demo.scss */
+/* line 81, ../scss/demo/_demo.scss */
 .window:nth-child(3) ul {
   list-style-type: none;
 }
-/* line 76, ../scss/demo/_demo.scss */
+/* line 82, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -230px;
 }
-/* line 82, ../scss/demo/_demo.scss */
+/* line 88, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content h2 {
   text-align: center;
   font-size: 1.0em;
   color: white;
   padding: 0 10%;
 }
-/* line 88, ../scss/demo/_demo.scss */
+/* line 94, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #333a3e;
@@ -128,74 +135,92 @@ pre {
   text-align: center;
   padding: 0 15%;
 }
-/* line 94, ../scss/demo/_demo.scss */
+/* line 100, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation li {
   color: #d5d7dd;
 }
 
-/* line 103, ../scss/demo/_demo.scss */
+/* line 109, ../scss/demo/_demo.scss */
 .window:nth-child(4) ul {
   list-style-type: none;
 }
-/* line 104, ../scss/demo/_demo.scss */
+/* line 110, ../scss/demo/_demo.scss */
 .window:nth-child(4) .window-content {
   position: absolute;
   top: 40%;
   width: 100%;
   margin-top: -230px;
 }
-/* line 110, ../scss/demo/_demo.scss */
+/* line 116, ../scss/demo/_demo.scss */
 .window:nth-child(4) .window-content h2 {
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
+/* line 122, ../scss/demo/_demo.scss */
+.window:nth-child(4) .window-content h3 {
+  font-color: #333a3e;
+  text-align: center;
+  font-size: 2.0em;
+  margin-top: 10%;
+}
 
-/* line 120, ../scss/demo/_demo.scss */
+/* line 133, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 125, ../scss/demo/_demo.scss */
+/* line 138, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
+/* line 144, ../scss/demo/_demo.scss */
+.window:nth-child(5) .window-content h3 {
+  font-color: black;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0 15%;
+}
 
-/* line 137, ../scss/demo/_demo.scss */
+/* line 156, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content {
   position: absolute;
   top: 40%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 142, ../scss/demo/_demo.scss */
+/* line 161, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
+/* line 167, ../scss/demo/_demo.scss */
+.window:nth-child(6) .window-content h1 {
+  font-size: 2.0em;
+}
 
-/* line 153, ../scss/demo/_demo.scss */
+/* line 175, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content {
   position: absolute;
   top: 35%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 158, ../scss/demo/_demo.scss */
+/* line 180, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
-/* line 164, ../scss/demo/_demo.scss */
+/* line 186, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content h3 {
   color: black;
   text-align: center;
@@ -203,14 +228,14 @@ pre {
   padding: 0 15%;
 }
 
-/* line 174, ../scss/demo/_demo.scss */
+/* line 196, ../scss/demo/_demo.scss */
 .window:nth-child(8) .window-content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 179, ../scss/demo/_demo.scss */
+/* line 201, ../scss/demo/_demo.scss */
 .window:nth-child(8) .window-content h2 {
   color: white;
   text-align: center;

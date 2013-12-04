@@ -301,11 +301,6 @@
             </center>
           </div>
 
-          <div class="bottom">
-            <a href="#8" class="scroll">
-              <i class="darkgrey angle down icon"></i>            
-            </a>
-          </div> 
       </section>
 
 
@@ -316,24 +311,8 @@
     <script src="js/jquery.windows.js"></script>
     <script src="js/semantic.min.js"></script>
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <script src="js/site.js"></script>
     <script>
-      $(document).ready(function(){
-        $('.window').windows({
-          snapping: true,
-          snapSpeed: 400,
-          snapInterval: 700,
-          onScroll: function(scrollPos){
-              // scrollPos:Number
-          },
-          onSnapComplete: function($el){
-              // after window ($el) snaps into place
-          },
-          onWindowEnter: function($el){
-              // when new window ($el) enters viewport
-          }
-        });
-      });
-
       $('.ui.accordion')
         .accordion()
       ;
@@ -358,21 +337,7 @@
             button.className = "ui button red";
           }
         }
-      }
-      
-      // Smooth Scroll to location
-      $(".scroll").click(function(event){
-         event.preventDefault();
-         //calculate destination place
-         var dest=0;
-         if($(this.hash).offset().top > $(document).height()-$(window).height()){
-              dest=$(document).height()-$(window).height();
-         }else{
-              dest=$(this.hash).offset().top;
-         }
-         //go to destination
-         $('html,body').animate({scrollTop:dest}, 500,'swing');
-      })
+      }      
 
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');

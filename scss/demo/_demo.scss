@@ -59,13 +59,19 @@ pre{
         position:absolute;
         top:50%;
         width:100%;
-        margin-top:-180px;
+        margin-top:-200px;
         h2{
             color:white;
             text-align:center;
             .highlight{
                 color:white;
             }
+            padding:0 15%;
+        }
+        h3{
+            color:white;
+            text-align:center;
+            font-size:0.5em;
         }
     }
 }
@@ -112,6 +118,13 @@ pre{
             font-size:1.0em;
             padding:0 15%;
         }
+
+        h3{
+            font-color:$dark-gray;
+            text-align:center;
+            font-size:2.0em;
+            margin-top:10%;
+        }
     }    
 }
 
@@ -127,6 +140,12 @@ pre{
             text-align:center;
             font-size:1.0em;
             padding:0 15%;
+        }
+        h3{
+            font-color:black;
+            text-align:center;
+            font-size:1.5em;
+            padding: 0 15%;
         }
     }
 }
@@ -144,6 +163,9 @@ pre{
             text-align:center;
             font-size:1.0em;
             padding:0 15%;
+        }
+        h1{
+            font-size:2.0em;
         }
     }
 }

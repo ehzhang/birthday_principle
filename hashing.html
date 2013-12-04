@@ -3,14 +3,13 @@
 <html>
   <head>
     <title> The Birthday Principle - Hashing </title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-    </script>
-    <script src="js/jquery-2.0.3.min.js">
-    </script>
-    <script src="js/jquery.windows.js">
-    </script>
-    <script src="js/semantic.min.js">
-    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.windows.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+    <script src="js/site.js"></script>
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -49,8 +48,10 @@
 
         <section id="0" class="window">
             <div class="window-content">
-                    <h1> What is the Birthday Principle? </h1>
-                    <h2> If there are 25 people in a room, what is the probability that 2 people share a birthday?
+                    <h1>Hash Tables and Birthdays</h1>
+                    <h2> What is a Hash Table? What is a Hash Function?
+                      <br>
+                      What does this have anything to do with birthdays?
                     </h2>
             </div>
             <div class="bottom">
@@ -61,39 +62,148 @@
 
         <section id="2" class="window">
             <div class="window-content">
-                <h2>Section 2</h2>
+                    <h2> A <b> hash table </b> is a data structure important in computer science that stores data, known as a <b> key </b> as a hash value. We turn a <b>key</b> into a hash value by applying some kind of hash function. 
+                    </h2>
+                    <a href="http://en.wikipedia.org/wiki/Hash_function"><img src="http://upload.wikimedia.org/wikipedia/commons/5/58/Hash_table_4_1_1_0_0_1_0_LL.svg" width="220"></a>
+                    <br>
+                    <h3>
+                      Example of hashing keys. Source: http://en.wikipedia.org/wiki/Hash_function
+                    </h3>
+                    <h2>
+                      We can think of hashing as placing data (such as a word) into a certain number of "buckets." For example, John Smith hashes to bucket 2, and Lisa Smith hashes to bucket 1.
+                    </h2>
+            </div>
+            <div class="bottom">
+              <a href="#3" class="scroll"><i class="darkgrey angle down icon"></i>
+              </a>
             </div>
         </section>
 
         <section id="3" class="window">
             <div class="window-content">
-                <h2>Section 3</h2>
+                    <h2>
+                      Suppose we wanted to hash a set of integers into <i>n</i> buckets. We would want to use a hash function to map each integer to one of the <i>n</i> buckets. For example, one simple hash function is taking an an integer input mod n, where the modulus operator is the remainder of the integer when divided by n. This is called the 'division method' for hashing.
+                      <br>
+                      <br>
+                      A collision occurs when two different inputs result in the same hash value. For example, 6 mod 5 and 11 mod 5 both result in '1'.
+
+                      <br>
+                      <br>
+                      Think for yourself: Why would we want to use the modulus operator? What would be a good number to use in the division method? What would be a terrible number?
+                    </h2> 
+
+                <div class="ui accordion">
+                  <div class="active title">
+                    Show me why!
+                    <i class="dropdown icon"></i>
+                    <br>
+
+                  </div>
+
+                  <div class="content">
+
+                    Using the modulus operator allows us to restrict the overall size of the space used for the hash table. Because the modulus operator is a remainder, for 'n' buckets there cannot be a hash value greater than 'n'.
+
+                    <br>
+                    <br>
+                    A good number would be a large prime number so it is less likely for multiple numbers to be divisible by it. A terrible number would be a number like '2', which would likely result in many collisions.
+
+                  </div>
+                </div>                   
+
+            </div>
+            <div class="bottom">
+              <a href="#4" class="scroll"><i class="darkgrey angle down icon"></i>
+              </a>
             </div>
         </section>
 
         <section id="4" class="window">
             <div class="window-content">
-                <h2>Section 4</h2>
+              <h3>
+                THINK FOR YOURSELF:
+                <br>
+                What makes hash tables useful?
+              </h3>
+              <div class="ui accordion">
+                <div class="active title">
+                  I dunno. Show me!
+                  <i class="dropdown icon"></i>
+                  <br>
+
+                </div>
+
+                <div class="content">
+
+                  The main reason why hash tables are so prevalent in computer science is because they provide fast lookup time. The time required for us to check if an item exists in the hash table does not depend on the amount of items in the table. Suppose we wanted to check whether "John Smith" was in our table. We could quickly compute the hash value for John Smith and check to see if the corresponding bucket is empty or not. 
+
+                </div>
+              </div>    
+            </div>
+            <div class="bottom">
+              <a href="#5" class="scroll"><i class="darkgrey angle down icon"></i>
+              </a>
+            </div>
+        </section>
+
+        <section id="5" class="window">
+            <div class="window-content">
+              <h3>
+                How can we reduce collisions with hash functions?
+                <br>
+                <br>
+                One method to hash would be to strive towards a hash function that would have a uniform distribution of values into buckets, so that each slot in the hash table has an equal opportunity of being filled. This would follow from the Simple Uniform Hashing Assumption, or 'SUHA' for short, which assumes that there is some hash function that is uniformly distributed, to allow for the mathematical analysis of hash tables.
+              </h3>
+            </div>
+            <div class="bottom">
+              <a href="#6" class="scroll"><i class="darkgrey angle down icon"></i>
+              </a>
+            </div>
+        </section>
+
+        <section id="6" class="window">
+            <div class="window-content">
+              <h1>
+                How does the birthday principle tie into this?
+              </h1>
+              <h2>
+                Think a little bit to yourself regarding the similarities and differences.
+              </h2>
+
+              <div class="ui accordion">
+                <div class="active title">
+                  Show me how!
+                  <i class="dropdown icon"></i>
+                  <br>
+
+                </div>
+
+                <div class="content">
+
+                 With the Simple Uniform Hashing Assumption (SUHA), we assume that the probability for distribution of values to 'buckets' is uniform, much like we assumed that the probability for every birthday is a uniform distribution. 
+
+                 <br>
+                 <br>
+
+                 A hash table acts like a variant of the birthday principle problem, where 'birthdays' represent a hash table of size 365, one for each birthday. As the probability of every birthday is equal, like in the hashing assumption, we can relate the probability of a single hash table collision to the probability of a shared birthdays in a room. 
+
+                 <br>
+                 <br>
+
+                 Thus, we can use the same equation from the birthday principle, modified so we can get the probability of a hash table collision in a table of size 'M' as: 
+
+                 <div lang="latex">P('SingleCollision') = 1 - e^{-\frac{n(n-1)}{2(M)}}</div>
+
+                 <br>
+                 Where 'n' is the number of values that have been added to the hash table. 
+
+                </div>
+              </div>    
             </div>
         </section>
 
       </div>
     </center>
-
-    <!-- Load the script at the end for faster load -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-    </script>
-    <script src="js/jquery.windows.js">
-    </script>
-    <script src="js/semantic.min.js">
-    </script>
-    <script>
-      $('.window').windows({
-        snapping: true,
-        snapSpeed: 500,
-        snapInterval: 1100,
-      });
-    </script>
 
   </body>
 </html>
