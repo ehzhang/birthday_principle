@@ -1,0 +1,213 @@
+<!-- Birthday Princple - Simple static webpage to demonstrate a 6.042 Section  -->
+
+<html>
+  <head>
+    <title> The Birthday Principle - Phenotypes </title>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.windows.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/site.js"></script>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+    <script>
+
+      function checkValue(question){
+        var button = document.getElementById("question" + question + "button")
+
+        if(question == 1) {
+          if (document.getElementById("question1").value == 20) {
+            button.className = "ui button green";
+          }
+          else {
+            button.className = "ui button red";
+          }
+        }
+
+        if(question ==2) {
+          var answer = document.getElementById("question2").value;
+          if (answer < .58 && answer > .56) {
+            button.className = "ui button green";
+          } else {
+            button.className = "ui button red";
+          }
+        }
+      }      
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  </head>
+  
+  <body>
+    <div class="fixed secondary pointing navbar ui red main menu opaque">
+      <a href="index.html" class="item">
+        <div id="active logo">
+          The Birthday Principle
+        </div>
+      </a>
+
+      <a href="index.html"class="item">
+        Overview
+      </a>
+
+      <a href="hashing.html"class="item">
+        Hashing
+      </a>
+
+      <a href="extensions.html" class="active item">
+        Extensions
+      </a>
+
+<!--       <a href="game.html" class="item">
+        Game
+      </a> -->
+
+    </div>
+
+    </div>
+    <center>
+
+      <div class = "content">
+
+      <section id="0" class="window">
+          <div class="window-content">
+                  <h1> Extensions to the Birthday Principle </h1>
+                  <h2> Using the Birthday Principle in The Movie Line problem.
+                  </h2>
+          </div>
+          <div class="bottom">
+            <a href="#2" class="scroll"><i class="darkgrey angle down icon"></i>
+            </a>
+          </div>
+      </section>
+
+      <section id="2" class="window">
+          <div class="window-content">
+
+            <h2> The Movie Line Problem:
+              <br>
+              <br>
+              The local movie theatre has a promotion: the first person in line whose birthday matches someone in front of them wins a free ticket. Which person in the queue of 100 people is most likely to be the lucky guy / gal?
+            </h2>
+
+            <center>
+              <div class="ui big action input">
+                <input id="question1" type="text" placeholder="Enter an answer here">
+                <div id="question1button" class="ui button" onclick="checkValue(1)"> Check Answer </div>
+              </div>
+
+            <br>
+
+            <div class="ui accordion">
+              <div class="active title">
+                <i class="dropdown icon"></i>
+                  See Solution and Explantion
+              </div>
+
+              <div class="content">
+
+                  The answer is 20! But why? <br>
+
+                  We can solve this problem similarly to how we thought about solving the original Birthday Principle problem. Continue onwards to see this problem fully explained. <br>
+
+              </div>
+            </div>
+
+            </center>
+
+        </div>
+
+        <div class="bottom">
+          <a href="#3" class="scroll">
+            <i class="lightgrey angle down icon"></i>            
+          </a>
+        </div>
+
+      </section>
+
+      <section id="3" class="window">
+          <div class="window-content">
+            <h3>
+              Each person whispers their birthday into the ticket-master's ear. If the person's birthday doesn't match anyone who was in front of him, then the ticket-master moves to the next person. 
+              <br>
+              <br>
+              Remember that the chance of finding of finding a pair of matching birthday is 50% for 23 people in the Birthday Problem, so we would expect that a similar outcome for the nth person in line to win the ticket!
+              <br>
+              <br>
+              Let P(n) be the probability that the nth person in the line gets the free ticket. 
+              <br>
+              <br>
+              Since the first person has no birthdays to compare too, he / she would never get that free ticket, so P(n=1) = 0
+              <br>
+              <br>
+              For the second person in line to win, his birthday has to be the same as the first person's birthday.
+              <br>
+              <br>
+              Thus, the first person can have any of the 365 birthdays (365/365). Then, whatever day it is, the person behind him must have that exact birthday, so the probability of the second person in line winning is (365/365) * (1/365), or (365/365^2).
+            </h3>
+
+          </div>
+          <div class="bottom">
+            <a href="#4" class="scroll">
+              <i class="lightgrey angle down icon"></i>            
+            </a>
+          </div>
+      </section>
+
+      <section id="4" class="window">
+          <div class="window-content">
+              <h2>
+                Once again, instead of thinking about how likely it is two people share a birthday, let's think about the chance that a group of people don't share a birthday. 
+                <br>
+                <br>
+                Thus, for the third player to win, that means that the first and second players have unique birthdays, and he must match one of the two birthdays before him. This becomes the probability:
+                <br>
+                <br>
+                <div lang="latex">P(n=3) = \dfrac{365}{365} \cdot \dfrac{364}{365} \cdot \dfrac{2}{365} \cdot</div>
+                <br>
+                We can see that we can calculate the probability of Person 3 getting the ticket by multiplying the chance of him having a repeat birthday with the chance of the other two participants NOT having a repeat birthday. All three of those events need to come true if Person 3 is to win, so we multiply the probability of those events together.
+                <br>
+                <br>
+                In general, looking at the trends (maybe we can display all the 3 answer for P (n) here), the formula for calculating P(n) is:
+                <br>
+                <br>
+                <div lang="latex">P(n) = \dfrac{365 * 364 * 363 ... * (365 - n + 1)}{365^n}</div>
+                <br>
+
+              </h2>
+          </div>
+          <div class="bottom">
+            <a href="#5" class="scroll">
+              <i class="darkgrey angle down icon"></i>            
+            </a>
+          </div>          
+      </section>
+
+      <section id="5" class="window">
+          <div class="window-content">
+              <h4>
+                Calculating these values for 'n', we can get the following graph and table:
+                <br>
+                <br>
+                <img src="img/movielinegraph.png" width="400">
+                <br>
+                <img src="img/movielinetable.png">
+                <br>
+                <br>
+                It is thus clear here that 20 is the most likely to win, as that is where probability is highest, and after that point probability begins to decrease. 
+                <br>
+                <br>
+                P.s. Go with a twin / friend with the same birthday to the movie and be the first two in line then one of you will win for sure! **Just joking! calculation for this problem assumes that no one has 'planned in advance to win' and a year has 365 days and birthdays have equal probability to falling on any one of the 365 days. 
+              </h4>
+          </div>
+          
+      </section>
+
+      </div>
+
+    </center>
+  </body>
+</html>
+

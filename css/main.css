@@ -127,7 +127,15 @@ pre {
   color: white;
   padding: 0 10%;
 }
-/* line 94, ../scss/demo/_demo.scss */
+/* line 95, ../scss/demo/_demo.scss */
+.window:nth-child(3) .window-content h3 {
+  text-align: center;
+  font-size: 1.0em;
+  color: white;
+  padding: 0 10%;
+  margin-top: 50px;
+}
+/* line 103, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #333a3e;
@@ -135,29 +143,29 @@ pre {
   text-align: center;
   padding: 0 15%;
 }
-/* line 100, ../scss/demo/_demo.scss */
+/* line 109, ../scss/demo/_demo.scss */
 .window:nth-child(3) .window-content .explanation li {
   color: #d5d7dd;
 }
 
-/* line 109, ../scss/demo/_demo.scss */
+/* line 118, ../scss/demo/_demo.scss */
 .window:nth-child(4) ul {
   list-style-type: none;
 }
-/* line 110, ../scss/demo/_demo.scss */
+/* line 119, ../scss/demo/_demo.scss */
 .window:nth-child(4) .window-content {
   position: absolute;
   top: 40%;
   width: 100%;
   margin-top: -230px;
 }
-/* line 116, ../scss/demo/_demo.scss */
+/* line 125, ../scss/demo/_demo.scss */
 .window:nth-child(4) .window-content h2 {
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
-/* line 122, ../scss/demo/_demo.scss */
+/* line 131, ../scss/demo/_demo.scss */
 .window:nth-child(4) .window-content h3 {
   font-color: #333a3e;
   text-align: center;
@@ -165,62 +173,70 @@ pre {
   margin-top: 10%;
 }
 
-/* line 133, ../scss/demo/_demo.scss */
+/* line 142, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 138, ../scss/demo/_demo.scss */
+/* line 147, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
-/* line 144, ../scss/demo/_demo.scss */
+/* line 153, ../scss/demo/_demo.scss */
 .window:nth-child(5) .window-content h3 {
   font-color: black;
   text-align: center;
   font-size: 1.5em;
   padding: 0 15%;
 }
+/* line 159, ../scss/demo/_demo.scss */
+.window:nth-child(5) .window-content h4 {
+  font-color: black;
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0 15%;
+  margin-top: -75px;
+}
 
-/* line 156, ../scss/demo/_demo.scss */
+/* line 172, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content {
   position: absolute;
   top: 40%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 161, ../scss/demo/_demo.scss */
+/* line 177, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
-/* line 167, ../scss/demo/_demo.scss */
+/* line 183, ../scss/demo/_demo.scss */
 .window:nth-child(6) .window-content h1 {
   font-size: 2.0em;
 }
 
-/* line 175, ../scss/demo/_demo.scss */
+/* line 191, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content {
   position: absolute;
   top: 35%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 180, ../scss/demo/_demo.scss */
+/* line 196, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content h2 {
   color: black;
   text-align: center;
   font-size: 1.0em;
   padding: 0 15%;
 }
-/* line 186, ../scss/demo/_demo.scss */
+/* line 202, ../scss/demo/_demo.scss */
 .window:nth-child(7) .window-content h3 {
   color: black;
   text-align: center;
@@ -228,14 +244,14 @@ pre {
   padding: 0 15%;
 }
 
-/* line 196, ../scss/demo/_demo.scss */
+/* line 212, ../scss/demo/_demo.scss */
 .window:nth-child(8) .window-content {
   position: absolute;
   top: 50%;
   width: 100%;
   margin-top: -180px;
 }
-/* line 201, ../scss/demo/_demo.scss */
+/* line 217, ../scss/demo/_demo.scss */
 .window:nth-child(8) .window-content h2 {
   color: white;
   text-align: center;

@@ -91,6 +91,15 @@ pre{
             color:white;
             padding:0 10%;
         }
+
+        h3{
+            text-align:center;
+            font-size:1.0em;
+            color:white;
+            padding:0 10%;
+            margin-top:50px;
+        }
+
         .explanation{
             font-family:$regular;
             color:$dark-gray;
@@ -146,6 +155,13 @@ pre{
             text-align:center;
             font-size:1.5em;
             padding: 0 15%;
+        }
+        h4{
+            font-color:black;
+            text-align:center;
+            font-size:1.0em;
+            padding: 0 15%;
+            margin-top:-75px;
         }
     }
 }
