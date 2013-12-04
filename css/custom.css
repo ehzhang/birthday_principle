@@ -61,7 +61,7 @@ i.square:hover {
 canvas{
 	background:#33B5E5;
 }
-#numPeople{
+#numPeople,#lowScore,#highScore{
 	border:none;
 	width:5%;
 	background:none;

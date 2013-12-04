@@ -113,7 +113,7 @@
 
             <div id="pigeonBirthday">
               <div id="displayWindow">
-                <canvas id ="canvas" height="300" width="600">
+                <canvas id ="canvas" height="300" width="900">
                   
                 </canvas>
               </div>
@@ -122,6 +122,8 @@
                 <button id="clear" class="ui button" onclick="reset()">Reset</button>
                 Number of People: <input id="numPeople" value="0" readonly="" />
                 <span id="matchLabel">No matching birthdays.</span>
+                Low Score: <input id="lowScore" value="0" readonly="" />
+                High Score: <input id="highScore" value="0" readonly="" />
               </div>
 
             </div>
@@ -382,8 +384,9 @@
       var birthdays = new Array();
 
       function newBirthday(){
-        var xCoordinate = Math.floor(Math.random()*550);
-        var yCoordinate = Math.floor(Math.random()*250);
+        var xCoordinate = Math.floor(Math.random()*(canvas.width));
+        var yCoordinate = Math.floor(Math.random()*(canvas.height));
+
         function birthday(){
           randomMonth = Math.floor(Math.random()*12+1);
           if (randomMonth ==2 ){
@@ -406,19 +409,25 @@
         birthday();
         drawPerson();
         birthdayEntry = randomDay.toString() + randomMonth.toString();
-        console.log('Birthday Entry: '+birthdayEntry);
-        console.log('Last Index Of: '+birthdays.lastIndexOf(birthdayEntry));
+
         if (birthdays.lastIndexOf(birthdayEntry)==-1){
-          console.log('Not a match');
           birthdays.push(birthdayEntry);
         } else {
           birthdays.push(birthdayEntry);
           document.getElementById('addPerson').disabled=true;
           document.getElementById('matchLabel').innerHTML='Found a match! '+randomMonth+'/'+randomDay;
-          console.log('Found a match! ... you should do something....');
-          console.log(birthdayEntry);
+          if (document.getElementById('highScore').value==0&document.getElementById('lowScore').value==0){
+          	document.getElementById('lowScore').value=count;
+          	document.getElementById('highScore').value=count;
+          }
+          if (document.getElementById('highScore').value<count){
+          	document.getElementById('highScore').value=count;
+          }
+          if (document.getElementById('lowScore').value>count){
+          	document.getElementById('lowScore').value=count;
+          }
+
         }
-        console.log(birthdays);
       }
       function reset(){
         count=0;
