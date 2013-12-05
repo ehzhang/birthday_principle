@@ -148,6 +148,8 @@
                 <br>
                 <br>
                 <div lang="latex">P('IHaveAUniqueBirthday') = 1 - P('IShareABirthday')</div>
+                (Where <span lang="latex"> P(A)</span> refers to the probability of event A)
+                <br>
                 <br>
                 When person 1 (The first person!) enters the room, we have that:
                 <br>
@@ -157,17 +159,17 @@
                 This person has a 365/365 probability of having his own birthday. He can't share a birthday because there's noone to share the birthday with!
 
                 <br>
+                <br>
                 Next, enters person 2.
                 <br>
-                <br>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - \dfrac{1}{365}</div><br>
+                <div lang="latex">P('1stPersonHasAUniqueBirthday') = 1 - \dfrac{1}{365}</div><br>
                 She has a 364/365 probability of having a unique birthday, because there is a 1/365 chance she shares a birthday with person 1. 
 
                 <br>
+                <br>
                 Next, enters person 3.
                 <br>
-                <br>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - (\dfrac{1}{365} + \dfrac{1}{365})</div><br>
+                <div lang="latex">P('2ndPersonHasAUniqueBirthday') = 1 - (\dfrac{1}{365} + \dfrac{1}{365})</div><br>
                 He has a 363/365 probability of having his own birthday, because there is a 1/365 chance he shares a birthday with person one and a 1/365 chance he shares a birthday with person 2.
 
               </h2>
@@ -187,7 +189,7 @@
                 We can write the equation for the probability now as:
                 <br>
                 <br>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - \dfrac{n-1}{365}</div>
+                <div lang="latex">P('nthPersonHasAUniqueBirthday') = 1 - \dfrac{n-1}{365}</div>
                 The number <span lang="latex">\dfrac{(n-1)}{365}</span> is going to grow pretty quickly. at about 185 days, it will start to be more likely than not that the person entering the room shares a birthday with someone else.
                 <br>
                 In fact, the birthday principle equation grows much more quickly than <span lang="latex">\dfrac{(n-1)}{365}</span> because it has to take into consideration all the other probabilities that came before person <i>n</i>.
