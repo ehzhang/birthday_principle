@@ -92,7 +92,6 @@
             </center>
 
         </div>
-
         <div class="bottom">
           <a href="#3" class="scroll">
             <i class="lightgrey angle down icon"></i>            
@@ -143,34 +142,37 @@
       <section id="4" class="window">
           <div class="window-content">
               <h2>
-                Instead of thinking about how likely it is two people share a birthday, let's think about the chance that a group of people don't share a birthday. <br>
-                Let's start with an individual's chance of not-sharing a birthday. This can be calculated, pretty simply as:
+                Instead of thinking about how likely it is that two people would share a birthday, let's think in terms of the chance that no pair in the group share a birthday, since:
                 <br>
                 <br>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - P('IShareABirthday')</div>
-                (Where <span lang="latex"> P(A)</span> refers to the probability of event A)
+                <div lang="latex">P(atLeastTwoPeopleShareABirthdayInAGroupOfSizeN) = 1 - P(noSharedBirthdaysInAGroupOfSize'n')
+                </div>
+                <br>
+                To visualize this, we will let the members of this group enter a room one at a time and calculate the probability that those in the room do not share a birthday / have a unique birthday.
+                <br>
+                When the first person, David, enters the room. He has a birthday of January 13th. We have that:                
                 <br>
                 <br>
-                When person 1 (The first person!) enters the room, we have that:
+                <div lang="latex">P(no One Sharing A Birthday) = \frac{365}{365}                  
+                </div>
+                <br>
+                As no one other than David is in the room, he does not share a birthday with anyone else, so the probability of him having his own birthday is 365/365 = 1.
+                </span>                
                 <br>
                 <br>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - P('IShareABirthday')</div>
-                <div lang="latex">P('IHaveAUniqueBirthday') = 1 - 0</div><br>
-                This person has a 365/365 probability of having his own birthday. He can't share a birthday because there's noone to share the birthday with!
-
+                Next, the second person, Amanda enters the room.
+                <br>
+                In order for no one in the room to share a birthday, Amanda must have a different birthday from David. This happens only when she has a birthday that falls on any other day than January 13th / any of the other 364 days in a year. The probability of this event being true is then:
                 <br>
                 <br>
-                Next, enters person 2.
+                <div lang="latex">P(no One Sharing A Birthday) = \frac{365}{365} \ast \frac{364}{365}</div>
                 <br>
-                <div lang="latex">P('1stPersonHasAUniqueBirthday') = 1 - \dfrac{1}{365}</div><br>
-                She has a 364/365 probability of having a unique birthday, because there is a 1/365 chance she shares a birthday with person 1. 
-
+                Next, the third person, Miranda enters the room.
+                <br>
+                In order for no one in the room to share a birthday, Miranda must have a birthday that is different than David's and Amanda's. If Amanda had her birthday on December 20th, then the event that no one in the room shares a birthday would only be true if Miranda's birthday falls on any other day than January 13th and December 20th / any of the other 363 days in a year. We now have:
                 <br>
                 <br>
-                Next, enters person 3.
-                <br>
-                <div lang="latex">P('2ndPersonHasAUniqueBirthday') = 1 - (\dfrac{1}{365} + \dfrac{1}{365})</div><br>
-                He has a 363/365 probability of having his own birthday, because there is a 1/365 chance he shares a birthday with person one and a 1/365 chance he shares a birthday with person 2.
+                <div lang="latex">P(no One Sharing A Birthday) = \frac{365}{365} \ast \frac{364}{365} \ast \frac{363}{365}</div>
 
               </h2>
           </div>
@@ -184,17 +186,32 @@
       <section id="5" class="window">
           <div class="window-content">
               <h2>
-                Now, person <i>n</i> enters the room.
-                <br>
-                We can write the equation for the probability now as:
-                <br>
-                <br>
-                <div lang="latex">P('nthPersonHasAUniqueBirthday') = 1 - \dfrac{n-1}{365}</div>
-                The number <span lang="latex">\dfrac{(n-1)}{365}</span> is going to grow pretty quickly. at about 185 days, it will start to be more likely than not that the person entering the room shares a birthday with someone else.
-                <br>
-                In fact, the birthday principle equation grows much more quickly than <span lang="latex">\dfrac{(n-1)}{365}</span> because it has to take into consideration all the other probabilities that came before person <i>n</i>.
-                <br>
-                <br>
+              Continuing with letting each person into the room and calculating the probability as before, we find that when the nth person enters the room, we have:
+              <br>
+              <br>
+              <div lang="latex">P(noSharedBirthdaysInAGroupOfSize'n') = \frac{365}{365} \ast \frac{364}{365} \ast \frac{363}{365} ... \ast \frac{(365- n + 1)}{365} 
+              </div>
+              <br>
+              <div lang="latex">
+              = \frac{365 \ast 364 \ast 363 \ast ... \ast (365 - n +1)}{365^n}
+              </div>
+              <br>
+              So <span lang="latex">P(noSharedBirthdaysInAGroupOfSize'n')</span> decreases very fast as N, the number of people in the room, increases.
+              <br>
+              <br>
+              Now: 
+              <br>
+              <div lang="latex">P(at Least One Pair In A Group Of n People Sharing A Birthday) = 1 - P(no One Sharing A Birthday In A Group Of n People)</div>
+              <br>
+              Therefore, the P(at Least One Pair In A Group Of n People Sharing A Birthday) grows larger very fast. 
+              <br>
+              <br>
+              <div lang="latex">P(no One Sharing A Birthday In A Group Of n People) = \frac{365 \ast 364 \ast 363 \ast ... \ast (365 - n +1)}{365^n} 
+              </div>
+              <div lang="latex">= (1-\frac{0}{365})(1-\frac{1}{365})(1-\frac{2}{365})....
+              </div>
+              <br>
+              <br>
 
               </h2>
           </div>
