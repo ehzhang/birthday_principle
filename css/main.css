@@ -73,7 +73,7 @@ pre {
   width: 100%;
   text-align: center;
   display: inline-block;
-  color: #6ab29f;
+  color: #57bbc3;
 }
 /* line 46, ../scss/demo/_demo.scss */
 .window:nth-child(1) .window-content h1 {
@@ -304,7 +304,7 @@ html, body {
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(3) {
-  background: #6ab29f;
+  background: #57bbc3;
   top: 200%;
 }
 
@@ -316,7 +316,7 @@ html, body {
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(5) {
-  background: #6ab29f;
+  background: #57bbc3;
   top: 400%;
 }
 
@@ -328,7 +328,7 @@ html, body {
 
 /* line 36, ../scss/main.scss */
 .window:nth-child(7) {
-  background: #6ab29f;
+  background: #57bbc3;
   top: 600%;
 }
 
